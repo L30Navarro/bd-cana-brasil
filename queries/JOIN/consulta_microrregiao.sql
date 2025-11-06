@@ -1,4 +1,4 @@
--- Consulta de produção de cana-de-açúcar por microrregiões
+-- Consulta de produção de cana-de-açúcar nas microrregiões produtoras no Brasil
 SELECT 
     cana_de_acucar.volume_produzido AS "Volume", 
     microrregiao.id_microrregiao AS "Código da Microrregião", 
