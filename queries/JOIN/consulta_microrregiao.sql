@@ -1,9 +1,9 @@
--- Busca de produção por microrregiões, no caso todas do Brasil
+-- Consulta de produção de cana-de-açúcar nas microrregiões produtoras no Brasil
 SELECT 
     cana_de_acucar.volume_produzido AS "Volume", 
     microrregiao.id_microrregiao AS "Código da Microrregião", 
     cana_de_acucar.area_plantada AS "Área produzida",
-	microrregiao.microrregiao as "Microrregiões de São Paulo"
+	microrregiao.microrregiao as "Microrregiões do Brasil"
 FROM 
     municipio
 INNER JOIN 
