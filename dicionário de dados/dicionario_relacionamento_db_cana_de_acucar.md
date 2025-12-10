@@ -6,7 +6,7 @@
 |----------------------|----------------|---------------------------------------------|--------------------------------------------|
 | `Cultiva` | municipio        | cana_de_acucar     | Relacionamento que associa cada registro das variáveis relacionadas à produção de cana-de-açúcar ao município correspondente, identificando onde a produção ocorreu.|
 | `Inclui` |microrregiao|municipio | Relacionamento que associa o município à sua microrregião correspondente, conforme a divisão territorial do IBGE.|
-| `Inclui`      | mesorregiao          | microrregiao      | Relacionamento que agrupa a microrregião à mesorregião a que pertencem, conforme a divisão territorial do IBGE. |
+| `Inclui`      | mesorregiao          | microrregiao      | Relacionamento que agrupa a microrregião à sua mesorregião a que pertencem, conforme a divisão territorial do IBGE. |
 | `Inclui`      | pais         | estado     | Relacionamento que vincula o estado ao país correspondente, de acordo com a divisão territorial oficial adotada.|
 | `Inclui`      | estado          | municipio      | Relacionamento que liga o município ao estado correspondente, de acordo com a divisão territorial do IBGE.|
 | `Abriga`      | municipio          | populacao     | Relacionamento que vincula cada registro de população ao município em que está associado.  |
