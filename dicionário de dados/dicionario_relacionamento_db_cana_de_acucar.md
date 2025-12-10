@@ -4,19 +4,19 @@
 
 | Relacionamento               | Tabela 1 - FK |         Tabela 2 - PK                         | Descrição |
 |----------------------|----------------|---------------------------------------------|--------------------------------------------|
-| `Cultiva` | municipio        | cana_de_acucar     | Relacionamento que associa cada registro das variáveis relacionadas à produção de cana-de-açúcar ao município correspondente, permitindo análises por localidade, produtividade municipal, comparações regionais e estudos socioeconômicos associados à produção.|
-| `Inclui` |microrregiao|municipio | Relacionamento que descreve a qual microrregião cada município pertence. Permite estruturar análises geográficas, socioeconômicas e de produção com base na divisão territorial oficial do IBGE.|
-| `Inclui`      | mesorregiao          | microrregiao      | Relacionamento que agrupa microrregiões dentro de mesorregiões (ou regiões intermediárias). Facilita estudos regionais mais amplos, permitindo comparar dinâmicas territoriais e produtivas entre clusters geográficos maiores. |
-| `Inclui`      | pais         | estado     | Relacionamento que identifica o país ao qual cada estado pertence. É a base da hierarquia geopolítica do banco, permitindo análises nacionais e internacionais da produção e comparações entre estados de diferentes países.|
-| `Inclui`      | estado          | municipio      | Relacionamento que indica a qual estado cada município pertence. Suporta agregações por estado, comparação entre unidades federativas e integra análises produtivas, demográficas e econômicas.|
-| `Abriga`      | municipio          | populacao     | Relacionamento que associa os dados de população ao município correspondente. Permite análises demográficas, estudos sobre oferta de trabalho e correlação entre população residente e produção agroindustrial. |
-| `Registra`      | municipio          | pib     | Relacionamento que vincula o PIB municipal ao respectivo município. Permite análises econômicas locais e correlações entre nível de atividade econômica, desenvolvimento e produção de cana-de-açúcar. |
-| `Registra`      | estado          | pib     | Relacionamento que vincula o PIB estadual ao estado correspondente. Facilita estudos macroeconômicos regionais, comparações entre estados e análises da influência da economia estadual no setor sucroenergético. |
-| `Registra`      | pais         | pib     | Relacionamento que vincula dados de PIB nacional ao país. Permite análises internacionais e macroeconômicas envolvendo produção de cana-de-açúcar, exportações e competitividade. |
-| `Registra`      | municipio          | idh_municipal     |Relacionamento que vincula o IDH municipal à sua localidade. Suporta análises sociais e cruzamentos com indicadores produtivos|
-| `Registra`      | estado          | idh_estadual     | Relacionamento que vincula o IDH estadual ao respectivo estado, possibilitando estudos socioeconômicos agregados e análises estruturais do território. |
-| `Registra`      | pais         | idh_pais    | Relacionamento que vincula o IDH nacional ao país correspondente, permitindo análises macroeconômicas comparadas entre países. |
-| `Possui`      | usina          | usina_historico     | Relacionamento que vincula cada usina ao seu histórico cadastral e operacional. Permite acompanhar abertura, fechamento, fusões, alterações legais e evolução das operações industriais ao longo do tempo. 
-| `Abriga`     | municipio| usina| Relacionamento que vincula as usinas ao município onde estão localizadas. Permite análise geográfica da capacidade produtiva, distribuição industrial e correlação com indicadores municipais. |a um único estado |
-| `Abrange`     | bacia_hidrografica| bacia_municipio| Relacionamento que associa cada município à bacia hidrográfica correspondente (tabela associativa muitos-para-muitos). É essencial para análises ambientais, disponibilidade hídrica, gestão territorial e impactos da produção agrícola sobre recursos naturais. |a um único estado |
-| `Abrange`     | municipio| bacia_municipio| Relacionamento que associa cada município à bacia hidrográfica correspondente (tabela associativa muitos-para-muitos). É essencial para análises ambientais, disponibilidade hídrica, gestão territorial e impactos da produção agrícola sobre recursos naturais. |a um único estado |
+| `Cultiva` | municipio        | cana_de_acucar     | Relacionamento que associa cada registro das variáveis relacionadas à produção de cana-de-açúcar ao município correspondente, identificando onde a produção ocorreu.|
+| `Inclui` |microrregiao|municipio | Relacionamento que associa o município à sua microrregião correspondente, conforme a divisão territorial do IBGE.|
+| `Inclui`      | mesorregiao          | microrregiao      | Relacionamento que agrupa a microrregião à mesorregião a que pertencem, conforme a divisão territorial do IBGE. |
+| `Inclui`      | pais         | estado     | Relacionamento que vincula o estado ao país correspondente, de acordo com a divisão territorial oficial adotada.|
+| `Inclui`      | estado          | municipio      | Relacionamento que liga o município ao estado correspondente, de acordo com a divisão territorial do IBGE.|
+| `Abriga`      | municipio          | populacao     | Relacionamento que vincula cada registro de população ao município em que está associado.  |
+| `Registra`      | municipio          | pib     | Relacionamento que vincula o PIB municipal ao respectivo município.  |
+| `Registra`      | estado          | pib     | Relacionamento que associa o PIB estadual ao estado correspondente. |
+| `Registra`      | pais         | pib     | Relacionamento que vincula o PIB nacional ao país correspondente.  |
+| `Registra`      | municipio          | idh_municipal     |Relacionamento que vincula o IDH municipal ao município correspondente.|
+| `Registra`      | estado          | idh_estadual     | Relacionamento que associa o IDH estadual ao respectivo estado. |
+| `Registra`      | pais         | idh_pais    | Relacionamento que vincula o IDH nacional ao país correspondente. |
+| `Possui`      | usina          | usina_historico     | Relacionamento que liga cada usina ao seu histórico cadastral e operacional.| 
+| `Abriga`     | municipio| usina| Relacionamento que vincula a usina ao município onde está localizada.  |
+| `Abrange`     | bacia_hidrografica| bacia_municipio| Relacionamento que associa cada bacia hidrográfica ao município que ela abrange.  |
+| `Abrange`     | municipio| bacia_municipio| Relacionamento que vincula cada município à bacia hidrográfica correspondente. |
