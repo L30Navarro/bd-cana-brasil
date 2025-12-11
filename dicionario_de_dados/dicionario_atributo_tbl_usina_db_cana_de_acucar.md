@@ -7,7 +7,7 @@ h1 style="text-align: center;">Dicionário de Dados - Atributos da tabela usina<
 | `grupo_empresarial`|VARCHAR| 120 |   31.68  bytes   | NOT NULL| N/D| Nome do grupo empresarial que engloba a unidade industrial (usina).|
 | `unidade`|VARCHAR| 70 |   28.87 bytes   | NOT NULL| N/D|Nome da unidade industrial (usina) pertencente ao grupo empresarial.|
 | `cnpj`| CHAR | 14| 26 bytes      | NOT NULL| N/D| Número de inscrição da unidade industrial no Cadastro Nacional da Pessoa Jurídica (CNPJ).|
-| `safra`  | BIGINT  |  |20 bytes| NOT NULL| N/D| Ano de referência das informações produtivas da unidade industrial.|
+| `safra`  | INTEGER |  |20 bytes| NOT NULL| N/D| Ano de referência das informações produtivas da unidade industrial.|
 | `cap_etanol_anidro`      | INTEGER | |19.46 bytes| NOT NULL | N/D| Capacidade instalada da unidade para produção de etanol anidro (m3/dia).|
 | `cap_etanol_hidratado`      | INTEGER | |20 bytes| NOT NULL| N/D|  Capacidade instalada da unidade para produção de etanol hidratado (m3/dia).|
 | `cap_moagem`      | INTEGER | |19.02 bytes| NOT NULL | N/D| Capacidade de moagem de cana-de-açúcar da unidade industrial (1000t/ano).|
