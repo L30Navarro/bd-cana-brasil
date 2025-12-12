@@ -3,8 +3,8 @@
 
 | Nome da Coluna              | Tipo de dado|  Tamanho | Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|--------------|------------|------------|------------|------------|
-| `id_usina`|INTEGER|  | 20 bytes      | PK, NOT NULL| N/D| Número de identificação da usina gerado automaticamente.|
-| `grupo_empresarial`|VARCHAR| 120 |   31.68  bytes   | NOT NULL| N/D| Nome do grupo empresarial que engloba a unidade industrial (usina).|
+| `id_usina`| SERIAL |  | 20 bytes      | PK| N/D| Número de identificação da usina gerado automaticamente.|
+| `grupo_empresarial`|VARCHAR| 120 |   31.68  bytes   | NULL| N/D| Nome do grupo empresarial que engloba a unidade industrial (usina).|
 | `unidade`|VARCHAR| 70 |   28.87 bytes   | NOT NULL| N/D|Nome da unidade industrial (usina) pertencente ao grupo empresarial.|
 | `cnpj`| CHAR | 14| 26 bytes      | NOT NULL| N/D| Número de inscrição da unidade industrial no Cadastro Nacional da Pessoa Jurídica (CNPJ).|
 | `safra`  | INTEGER |  |20 bytes| NOT NULL| N/D| Ano de referência das informações produtivas da unidade industrial.|
