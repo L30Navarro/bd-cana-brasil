@@ -4,7 +4,7 @@
 
 | Nome da Coluna              | Tipo de dado|  Tamanho | Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|--------------|------------|------------|------------|------------|
-| `id_cana_de_acucar` | INTEGER     |      | 22 bytes  | PK, NOT NULL| N/D| Número de identificação da cana_de_acucar gerado automaticamente.
+| `id_cana_de_acucar` | SERIAL    |      | 22 bytes  | PK | N/D| Número de identificação da cana_de_acucar gerado automaticamente.
 | `safra`|INTEGER| |   20 bytes   | NOT NULL| N/D| Ano de referência da safra da produção de cana-de-açúcar, conforme calendário anual utilizado pela Produção Agrícola Municipal (PAM) do IBGE.|
 | `volume_producao`|INTEGER | | 20.61 bytes      | NOT NULL| N/D| Volume de produção de cana-de-açúcar, conforme a metodologia Produção Agrícola Municipal (PAM) do IBGE.|
 | `area_plantada`  | INTEGER  |  |20.16 bytes| NOT NULL| N/D| Área total utilizada para o plantio de cana-de-açúcar no ano de referência, conforme a metodologia da Produção Agrícola Municipal (PAM) do IBGE.| 
