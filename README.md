@@ -1,2 +1,2 @@
-# db-cana-brasil
-Modelagem dos dados da cana-de-açúcar do Brasil, utilizando dados públicos da Produção Agrícola Municipal (PAM) do banco SIDRA do IBGE.
+# **db-cana-brasil - Banco de Dados Relacional da produção de cana-de-açúcar no Brasil.**
+## Este repositório, que foi modelado em PostgreSQL, contém a modelagem completa do banco de dados da produção de cana-de-açúcar no Brasil, utilizando dados públicos da Produção Agrícola Municipal (PAM/IBGE), abrangendo as safras de 2009 até 2022. O objetivo é centralizar, padronizar e estruturar informações de produção para análises estatísticas, exploração geográfica e consultas avançadas, observando os requisitos do sistema e as regras de negócio que orientam a modelagem do banco de dados.
