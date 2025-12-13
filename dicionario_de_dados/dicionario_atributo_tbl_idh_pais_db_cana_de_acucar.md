@@ -3,7 +3,7 @@
 
 | Nome da Coluna              | Tipo de dado|  Tamanho | Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|--------------|------------|------------|------------|------------|
-| `id_idh_pais`|INTEGER|  | 22 bytes      | PK, NOT NULL| N/D| Número de identificação do registro do idh_pais gerado automaticamente.|
+| `id_idh_pais`| SERIAL |  | 22 bytes      | PK | N/D| Número de identificação do registro do idh_pais gerado automaticamente.|
 | `periodo`|INTEGER|  |   20  bytes   | NOT NULL| N/D| Ano de referência do cálculo do Índice de Desenvolvimento Humano (IDH).|
 | `pais_idh_geral`|NUMERIC| 4,3 |   19.80 bytes   | NOT NULL| N/D|Valor do Índice de Desenvolvimento Humano (IDH) geral por país no ano de referência.|
 | `idh_pais_renda`| NUMERIC | 4,3| 12 bytes      | NOT NULL| N/D| Componente “Renda” do Índice de Desenvolvimento Humano (IDH) do país.|
