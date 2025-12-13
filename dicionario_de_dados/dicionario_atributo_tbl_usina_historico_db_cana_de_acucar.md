@@ -3,10 +3,10 @@
 
 | Nome da Coluna              | Tipo de dado|  Tamanho | Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|--------------|------------|------------|------------|------------|
-| `id_historico`|SERIAL|  |      | PK | N/D| Identificador único do registro histórico da usina gerado automaticamente.|
+| `id_historico`|INTEGER|  |      | PK | N/D| Identificador único do registro histórico da usina gerado automaticamente.|
 | `inicio_atividade`|DATE|  |      | NOT NULL| N/D| Data de início das atividades da usina.|
 | `fim_atividade`|DATE|  |      | NULL| N/D|Data de término das atividades da usina, quando aplicável; NULL se ainda estiver em operação.|
-| `situacao_cadastral`| VARCHAR | 21 |      | NOT NULL| N/D| Situação cadastral atual ou histórica da usina.|
+| `situacao_cadastral`| VARCHAR | 20 |      | NOT NULL, CHECK | N/D| Situação cadastral atual ou histórica da usina. Só aceita estes valores pré-definidos pela regra de negócio: Ativo, Inativo, Cancelado, Suspenso, Recuperação Judicial, Falência, Desativado, Em Processo de Venda, Em Implementação, Reativado, Judicializado, Licenciamento. |
 | `motivo`| TEXT |  |      | NULL| N/D| Motivo da alteração da situação cadastral da usina.|
 | `id_usina`  | INTEGER |   || FK| N/D| Número de identificação da usina gerado automaticamente.|
 
