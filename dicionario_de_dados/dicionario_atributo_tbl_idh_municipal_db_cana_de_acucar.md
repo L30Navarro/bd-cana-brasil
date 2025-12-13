@@ -3,7 +3,7 @@
 
 | Nome da Coluna              | Tipo de dado|  Tamanho | Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|--------------|------------|------------|------------|------------|
-| `id_idh_municipal`|INTEGER|  | 20.80 bytes      | PK, NOT NULL| N/D| Número de identificação do registro do idh_municipal gerado automaticamente.|
+| `id_idh_municipal`|SERIAL|  | 20.80 bytes      | PK | N/D| Número de identificação do registro do idh_municipal gerado automaticamente.|
 | `periodo`|INTEGER|  |   20  bytes   | NOT NULL| N/D| Ano de referência do cálculo do Índice de Desenvolvimento Humano Municipal (IDHM).|
 | `municipio_idh_geral`|NUMERIC| 4,3 |   20 bytes   | NOT NULL| N/D|Valor do Índice de Desenvolvimento Humano Municipal (IDHM) geral do município no ano de referência.|
 | `idh_municipio_renda`| NUMERIC | 4,3| 20 bytes      | NOT NULL| N/D|Componente “Renda” do Índice de Desenvolvimento Humano Municipal (IDHM) do município.|
