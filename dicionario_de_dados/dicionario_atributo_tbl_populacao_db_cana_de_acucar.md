@@ -3,7 +3,7 @@
 
 | Nome da Coluna              | Tipo de dado|  Tamanho | Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|--------------|------------|------------|------------|------------|
-| `id_populacao`|INTEGER|  | 20 bytes      | PK, NOT NULL| N/D| Número de identificação da populacao gerado automaticamente.|
+| `id_populacao`|SERIAL |  | 20 bytes      | PK | N/D| Número de identificação da populacao gerado automaticamente.|
 | `periodo`|INTEGER|  |   20  bytes   | NOT NULL| N/D| Ano de referência da atualização populacional do município, conforme a fonte oficial de dados demográficos do país.|
 | `populacao_total`|BIGINT| |   21.10 bytes   | NOT NULL| N/D| Quantidade total de habitantes do município no ano de referência, conforme a fonte oficial de dados demográficos do país.|
 | `quantidade_urbana`| BIGINT | | 20.78 bytes      | NOT NULL| N/D| Quantidade de habitantes residentes na área urbana do município no ano de referência, conforme a fonte oficial de dados demográficos do país.|
