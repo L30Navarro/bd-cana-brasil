@@ -5,5 +5,5 @@
 -- |===================================================================| 
 
 CREATE TABLE bacia_hidrografica ( id_bacia_hidrografica INT PRIMARY KEY,
-bacia_hidrografica VARCHAR (80) NOT NULL
+bacia_hidrografica VARCHAR (40)) NOT NULL
 );
