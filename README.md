@@ -9,7 +9,7 @@ e documentação disponível.
 
 O projeto já conta com consultas SQL utilizando:
 - JOINs entre múltiplas tabelas relacionais;
-- Funções de agregação (SUM, AVG, COUNT);
+- Funções de agregação (SUM e AVG);
 - Funções de janela (OVER, PARTITION BY) para análises comparativas
   entre níveis territoriais e temporais.
 ## Próximos passos
