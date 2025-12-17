@@ -6,4 +6,5 @@
 -- |===================================================================| 
 
 CREATE TABLE mesorregiao ( id_mesorregiao INT PRIMARY KEY, mesorregiao VARCHAR (35) NOT NULL,
-area_mesorregiao NUMERIC (9,3) NOT NULL);
+area_mesorregiao NUMERIC (9,3) NOT NULL
+);
