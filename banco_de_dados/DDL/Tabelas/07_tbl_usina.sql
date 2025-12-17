@@ -1,7 +1,7 @@
 -- |===================================================================| 
 -- | Tabela: usina                                                     |
 -- | Descrição: armazena as usinas do setor sucroenergético            |
--- | para associar com as análises.                                    | 
+-- | para associar com as análises da entidade cana-de-açúcar.         | 
 -- | Ordem de criação: sétima tabela a ser criada.                     |                   
 -- |===================================================================| 
 
