@@ -4,7 +4,7 @@
 | Nome da Coluna              | Tipo de dado|   Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|------------|------------|------------|------------|
 | `id_municipio`      | INTEGER | 4 bytes   | PK| N/D| Código oficial de identificação do município, conforme o identificador numérico atribuído pelo IBGE.|
-| `municipio`|VARCHAR|     até 50 caracteres   | NOT NULL| N/D|Nome oficial do município, segundo o registro administrativo do país ao qual pertence.|
+| `municipio`|VARCHAR|     até 35 caracteres   | NOT NULL| N/D|Nome oficial do município, segundo o registro administrativo do país ao qual pertence.|
 | `area_municipio`|NUMERIC| 10,3  | NOT NULL| N/D| Área territorial oficial do município, conforme a definição administrativa do país de origem.|
 | `latitude`  | NUMERIC | 9,6 | NOT NULL| N/D| Coordenada geográfica que indica a posição norte–sul do município, conforme o sistema de referência geodésico oficial do país.| 
 | `longitude`      | NUMERIC | 9,6 | NOT NULL|N/D|Coordenada geográfica que indica a posição leste–oeste do município, conforme o sistema de referência geodésico oficial do país.|
