@@ -4,25 +4,25 @@
 -- |na sequência correta, respeitando as chaves estrangeiras.                  |
 -- |Dessa forma, permite implementar a modelagem desse banco definida          | 
 -- |pela regra de negócios adotada.                                            |
--- |========================================================================== |
+-- |===========================================================================|
 
 
-CREATE TABLE pais ( id_pais INT PRIMARY KEY, pais VARCHAR (80));
+CREATE TABLE pais ( id_pais INT PRIMARY KEY, pais VARCHAR (32) NOT NULL);
 
-CREATE TABLE estado ( id_estado INT PRIMARY KEY, estado VARCHAR (50) NOT NULL, uf CHAR (2), 
-id_pais INT NOT NULL,
+CREATE TABLE estado ( id_estado INT PRIMARY KEY, estado VARCHAR (23) NOT NULL, 
+uf CHAR (2) NOT NULL, id_pais INT NOT NULL,
 FOREIGN KEY (id_pais) REFERENCES pais (id_pais)
 );
 
-CREATE TABLE mesorregiao ( id_mesorregiao INT PRIMARY KEY, mesorregiao VARCHAR (40),
-area_mesorregiao NUMERIC (9,3));
+CREATE TABLE mesorregiao ( id_mesorregiao INT PRIMARY KEY, mesorregiao VARCHAR (35) NOT NULL,
+area_mesorregiao NUMERIC (9,3) NOT NULL);
 
-CREATE TABLE microrregiao ( id_microrregiao INT PRIMARY KEY, microrregiao VARCHAR (40),
-area_microrregiao NUMERIC (9,3), id_mesorregiao INT NOT NULL,
+CREATE TABLE microrregiao ( id_microrregiao INT PRIMARY KEY, microrregiao VARCHAR (37) NOT NULL,
+area_microrregiao NUMERIC (9,3) NOT NULL, id_mesorregiao INT NOT NULL,
 FOREIGN KEY (id_mesorregiao) REFERENCES mesorregiao (id_mesorregiao)
 );
 
-CREATE TABLE municipio ( id_municipio INT PRIMARY KEY, municipio VARCHAR (50), 
+CREATE TABLE municipio ( id_municipio INT PRIMARY KEY, municipio VARCHAR (35) NOT NULL, 
 area_municipio NUMERIC (10,3) NOT NULL, latitude NUMERIC (9,6) NOT NULL, 
 longitude NUMERIC (9,6) NOT NULL, altitude NUMERIC (12,6) NOT NULL, id_microrregiao INT NOT NULL,
 id_mesorregiao INT NOT NULL, id_estado INT NOT NULL,
@@ -37,8 +37,8 @@ rendimento_medio INT NOT NULL, valor_producao INT NOT NULL, id_municipio INT NOT
 FOREIGN KEY (id_municipio) REFERENCES municipio (id_municipio)
 );
 
-CREATE TABLE usina ( id_usina SERIAL PRIMARY KEY, grupo_empresarial VARCHAR (130) NULL,
-unidade VARCHAR (70) NOT NULL, cnpj CHAR (14) NOT NULL, safra INT NOT NULL,
+CREATE TABLE usina ( id_usina SERIAL PRIMARY KEY, grupo_empresarial VARCHAR (70) NULL,
+unidade VARCHAR (50) NOT NULL, cnpj CHAR (14) NOT NULL, safra INT NOT NULL,
 cap_etanol_anidro INT NOT NULL, cap_etanol_hidratado INT NOT NULL, cap_moagem INT NULL,
 latitude NUMERIC (9,6) NOT NULL, Longitude NUMERIC (9,6) NOT NULL, id_municipio INT NOT NULL,
 FOREIGN KEY (id_municipio) REFERENCES municipio (id_municipio)
@@ -82,13 +82,14 @@ FOREIGN KEY (id_estado) REFERENCES estado (id_estado)
 );
 
 CREATE TABLE idh_pais ( id_idh_pais SERIAL PRIMARY KEY,  periodo INT NOT NULL,
-pais_idh_geral NUMERIC (4,3) NOT NULL, idh_pais_renda NUMERIC (4,3),
-idh_pais_longevidade NUMERIC (4,3), idh_pais_educacao NUMERIC (4,3), id_pais INT NOT NULL,
+pais_idh_geral NUMERIC (4,3) NOT NULL, idh_pais_renda NUMERIC (4,3) NOT NULL,
+idh_pais_longevidade NUMERIC (4,3), idh_pais_educacao NUMERIC (4,3) NOT NULL,
+id_pais INT NOT NULL,
 FOREIGN KEY (id_pais) REFERENCES pais (id_pais)
 );
 
 CREATE TABLE bacia_hidrografica ( id_bacia_hidrografica INT PRIMARY KEY,
-bacia_hidrografica VARCHAR (80) NOT NULL
+bacia_hidrografica VARCHAR (40) NOT NULL
 );
 
 CREATE TABLE bacia_municipio ( id_municipio INT NOT NULL, 
