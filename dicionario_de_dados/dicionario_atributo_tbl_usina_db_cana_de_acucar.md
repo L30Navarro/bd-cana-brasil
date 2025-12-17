@@ -4,7 +4,7 @@
 | Nome da Coluna              | Tipo de dado|  Comprimento | Restrições | Valor Padrão | Descrição|
 |----------------------|----------------|-------------|------------|------------|------------|
 | `id_usina`|INTEGER|   4 bytes      | PK| N/D| Identificador único da usina, gerado automaticamente por sequence (SERIAL).|
-| `grupo_empresarial`|VARCHAR|   até 70  caracteres   | NOT NULL| N/D| Nome do grupo empresarial que engloba a unidade industrial (usina).|
+| `grupo_empresarial`|VARCHAR|   até 70 caracteres   | NOT NULL| N/D| Nome do grupo empresarial que engloba a unidade industrial (usina).|
 | `unidade`|VARCHAR|    até 50 caracteres   | NOT NULL| N/D|Nome da unidade industrial (usina) pertencente ao grupo empresarial.|
 | `cnpj`| CHAR | 14 caracteres      | NOT NULL| N/D| Número de inscrição da unidade industrial no Cadastro Nacional da Pessoa Jurídica (CNPJ).|
 | `safra`  | INTEGER |  4 bytes| NOT NULL| N/D| Ano de referência das informações produtivas da unidade industrial.|
